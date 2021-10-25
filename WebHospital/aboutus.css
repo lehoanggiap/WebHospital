@@ -16,8 +16,8 @@ header {
     background: white;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     box-shadow: 0 5px 25px rgb(0 0 0 /20%);
+    align-items: center;
     padding: 0 100px;
     transition: 0.6s;
 }
@@ -60,7 +60,7 @@ header {
 
 .menu-item .sub-menu {
     position: absolute;
-    background: #23252B;
+    background: #fff;
     top: 70px;
     line-height: 40px;
     list-style: none;
@@ -79,6 +79,7 @@ header {
     transform: translateY(10px);
     opacity: 1;
     transition: 0.3s;
+    background-color:white;
 }
 
 .menu-item .sub-menu .sub-item {
@@ -89,7 +90,7 @@ header {
 }
 
     .menu-item .sub-menu .sub-item a {
-        color: #fff;
+        color: black;
         font-size: 20px;
         text-decoration: none;
         padding: 10px 20px;
@@ -112,7 +113,7 @@ header.white {
 }
 
     header.white .navigation .menu .menu-item > a {
-        color: black;
+        color: white;
     }
 
 @keyframes animate {
@@ -150,7 +151,7 @@ header.white {
             position: relative;
             top: 0;
             transform: translateX(10px);
-            background: rgba(255, 255, 255, 0.1);
+            background: white;
             border-radius: 5px;
             overflow: hidden;
             display: none;
