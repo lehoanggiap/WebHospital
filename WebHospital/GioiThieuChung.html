@@ -5,6 +5,8 @@
     <title>Giới thiệu chung - Bệnh viện da liễu TPHCM</title>
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
     <link rel="stylesheet" type="text/css" href="aboutus.css">
+    <!--import thư viện icon font awesome. Vô trang fontware cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         .toolbar {
@@ -12,11 +14,13 @@
             list-style: none;
             margin: 30px;
             padding: 0;
+            font-family: sans
         }
 
         .toolbar-item {
             display: block;
         }
+
         .toolbar .toolbar-item .sub-toolbar-item {
             position: relative;
             display: block;
@@ -29,19 +33,20 @@
             border-bottom: 1px solid #808080;
         }
 
-        .toolbar > :last-child > :last-child{
+        .toolbar > :last-child > :last-child {
             border: 0;
             padding-bottom: 0;
         }
+
         .toolbar .toolbar-item .sub-toolbar-item:hover {
             color: green;
             background-color: hotpink;
         }
 
         .toolbar .toolbar-item .sub-toolbar-item:before {
-            content: ">";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 700;
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            /*mã icon và tên font trong thư viện đã import font-weight: 700;*/
             position: absolute;
             top: -2px;
             right: 0;
@@ -58,11 +63,12 @@
             top: -3px;
             left: 0;
             z-index: 1;
-            font-size: 28px;
+            s font-size: 28px;
             background-color: #d9d9d9;
             transition: all 0.5s ease-out;
         }
-        .main_content_div{
+
+        .main_content_div {
             background-color: black;
             position: relative;
             display: flex;
@@ -78,9 +84,10 @@
             position: relative;
             width: 52%;
             background-color: dodgerblue;
-            padding: 10px;
+            padding-left: 15px;
             left: 9.5%;
         }
+
         .right_div_in_main_content_div {
             position: relative;
             width: 26%;
@@ -89,23 +96,25 @@
             font-size: 20px;
             right: 9.5%;
         }
+
         .inner_page_banner {
             position: relative;
             height: 90px;
             display: flex;
             background-color: red;
         }
+
         .item_list_element {
             position: relative;
             top: 50px;
             left: 9.5%;
         }
+
         .item_list_element_sub_item {
             text-decoration: none;
             color: white;
             font-size: 20px;
         }
-       
     </style>
 </head>
 <body>
@@ -187,8 +196,7 @@
             <p>Nội dung</p><br /><br />
             <h3>4/TẦM NHÌN: </h3><br />
             <p>Nội dung</p><br /><br />
-            <p><h3 style="text-align:center">LỊCH SỬ HÌNH THÀNH: </h3>skgjasldgjaklsgj<br/>skjgaksjdgksaljga<br/></p><br />
-
+            <p><h3 style="text-align:center">LỊCH SỬ HÌNH THÀNH: </h3>Nội dung<br/>Nội dung<br/></p><br />
         </div>
         <div class="right_div_in_main_content_div">
             <div style="position: absolute; width: 100%; box-shadow: 0 5px 25px rgb(0 0 0 /20%); top:0; left:0;">
@@ -204,8 +212,14 @@
             </div>
         </div>
     </div>
+    <div class="inner_page_banner"></div>
     <footer>
-      
+        <div style="display: block;">
+            <section style="background-color: #009247; padding: 90px 0px 38px; display: block; ">
+
+            </section>
+
+        </div>
     </footer>
 </body>
 </html>
