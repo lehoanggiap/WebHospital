@@ -11,17 +11,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         .toolbar {
-            height: 100%;
             list-style: none;
             margin: 30px;
             padding: 0;
-            font-family: sans
         }
 
         .toolbar-item {
             display: block;
         }
-
+        a{
+            text-decoration: none;
+        }
         .toolbar .toolbar-item .sub-toolbar-item {
             position: relative;
             display: block;
@@ -65,7 +65,6 @@
             top: -3px;
             left: 0;
             z-index: 1;
-            s font-size: 28px;
             background-color: #d9d9d9;
             transition: all 0.5s ease-out;
         }
@@ -116,6 +115,20 @@
             text-decoration: none;
             color: white;
             font-size: 20px;
+        }
+        .title{
+            display: block;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .title:after {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 4px;
+            background-color: #396cf0;
+            bottom: 0;
+            left: 0;
         }
     </style>
 </head>
@@ -217,8 +230,51 @@
     <div class="inner_page_banner"></div>
     <footer>
         <div style="display: block;">
-            <section style="background-color: #009247; padding: 90px 0px 38px; display: block; ">
-
+            <section style="background-color: #009247; padding: 90px 0px 38px; display: flex;">
+                <div style="margin-left: auto; margin-right: auto; display: flex; position: relative; width: 100%;">
+                    <div style="position: relative; width: 28%; left:9.5%; background-color: red; padding: 15px;">
+                        <p>Nội dung</p>
+                        <div style="display: flex; align-items :center; justify-content: space-between; margin-top: 20px;">
+                            <a href="#"><img src="Images/logoSaleNoti.png" style="max-width: 170px" /></a>
+                            <a href="#"><img src="Images/dmca-badge.png" style="max-width: 170px;" /></a>
+                        </div>
+                    </div>
+                    <div style="position: relative; width: 20%; left: 9.5%; background-color: aqua; padding: 15px;">
+                        <div style="position: relative;">
+                            <h3 class="title">Dịch vụ</h3>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none; margin:0; padding: 0; display: block">
+                                <li style="margin-bottom: 10px;"><a href="#">Khám da liễu</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Phẫu thuật da lưng</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Điều trị bệnh tràm</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="position: relative; width: 16.5%; left: 9.5%; background-color: blueviolet; padding: 15px;">
+                        <div style="position: relative;">
+                            <h3 class="title">Về chúng tôi</h3>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none; margin:0; padding: 0; display: block">
+                                <li style="margin-bottom: 10px;"><a href="#">Hệ thống</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Đội ngũ bác sĩ</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Tin tức</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="position: relative; width: 16.5%; left: 9.5%; background-color: brown; padding: 15px;">
+                        <div style="position: relative;">
+                            <h3 class="title">Liên hệ</h3>
+                        </div>
+                        <div>
+                            <ul style="list-style-type: none; margin:0; padding: 0; display: block">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-phone" style="color:white"></i><a href="#"style="margin-left: 10px;">123456789</a></li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color:white"></i><a href="#" style="margin-left: 10px;">info@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
 
         </div>
