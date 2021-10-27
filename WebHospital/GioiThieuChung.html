@@ -7,36 +7,105 @@
     <link rel="stylesheet" type="text/css" href="aboutus.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
-
-        .box {
-            box-shadow: 0 5px 25px rgb(0 0 0 /20%);
-        }
         .toolbar {
+            height: 100%;
             list-style: none;
-            margin: 0;
+            margin: 30px;
             padding: 0;
-            margin: 10px 20px 10px 20px;
         }
 
-       .toolbar .item {
-           display: flex;
-          
-       }
+        .toolbar-item {
+            display: block;
+        }
         .toolbar .toolbar-item .sub-toolbar-item {
-            padding: 20px 0px 20px 0px;
-            display: flex;
+            position: relative;
+            display: block;
             text-decoration: none;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
             border: 0;
             border-bottom: 1px solid #808080;
         }
 
-        .toolbar > :last-child > :last-child {
+        .toolbar > :last-child > :last-child{
             border: 0;
+            padding-bottom: 0;
         }
         .toolbar .toolbar-item .sub-toolbar-item:hover {
             color: green;
             background-color: hotpink;
         }
+
+        .toolbar .toolbar-item .sub-toolbar-item:before {
+            content: ">";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            z-index: 1;
+            color: #d9d9d9;
+            transition: all 0.5s ease-out;
+        }
+
+        .toolbar .toolbar-item .sub-toolbar-item:after {
+            content: "";
+            position: absolute;
+            height: 25px;
+            width: 2px;
+            top: -3px;
+            left: 0;
+            z-index: 1;
+            font-size: 28px;
+            background-color: #d9d9d9;
+            transition: all 0.5s ease-out;
+        }
+        .main_content_div{
+            background-color: black;
+            position: relative;
+            display: flex;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+            padding: 3% 0;
+        }
+
+        .left_div_in_main_content_div {
+            position: relative;
+            width: 52%;
+            background-color: dodgerblue;
+            padding: 10px;
+            left: 9.5%;
+        }
+        .right_div_in_main_content_div {
+            position: relative;
+            width: 26%;
+            background-color: white;
+            text-align: left;
+            font-size: 20px;
+            right: 9.5%;
+        }
+        .inner_page_banner {
+            position: relative;
+            height: 90px;
+            display: flex;
+            background-color: red;
+        }
+        .item_list_element {
+            position: relative;
+            top: 50px;
+            left: 9.5%;
+        }
+        .item_list_element_sub_item {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+       
     </style>
 </head>
 <body>
@@ -104,36 +173,39 @@
         </div>
         <div class="menu-btn"></div>
     </header>
-    <div style="float:left; width: 9.5%; height:10px ;background-color:black">
-        <p></p>
+    <div class="inner_page_banner">
+        <span class="item_list_element"><a href="#" class="item_list_element_sub_item"><strong>Bệnh viện da liễu &nbsp;></strong></a></span> 
+        <span class="item_list_element"><a href="aboutus.html" class="item_list_element_sub_item"><strong>&nbsp; Về chúng tôi &nbsp;> </strong></a></span> 
     </div>
-    <div style="float: left; width: 52%; background-color:dodgerblue; margin-top: 100px; padding: 10px;">
-        <p><h3>1/GIỚI THIỆU CHUNG: </h3></p><br />
-        <p>Nội dung</p><br /><br />
-        <h3>2/SỨ MỆNH: </h3><br />
-        <p>Nội dung</p><br /><br />
-        <h3>3/GIÁ TRỊ CỐT LÕI: </h3><br />
-        <p>Nội dung</p><br /><br />
-        <h3>4/TẦM NHÌN: </h3><br />
-        <p>Nội dung</p><br /><br />
-        <p><h3 style="text-align:center">LỊCH SỬ HÌNH THÀNH: </h3></p><br />
+    <div class="main_content_div">
+        <div class="left_div_in_main_content_div">
+            <p><h3>1/GIỚI THIỆU CHUNG: </h3></p><br />
+            <p>Nội dung</p><br /><br />
+            <h3>2/SỨ MỆNH: </h3><br />
+            <p>Nội dung</p><br /><br />
+            <h3>3/GIÁ TRỊ CỐT LÕI: </h3><br />
+            <p>Nội dung</p><br /><br />
+            <h3>4/TẦM NHÌN: </h3><br />
+            <p>Nội dung</p><br /><br />
+            <p><h3 style="text-align:center">LỊCH SỬ HÌNH THÀNH: </h3>skgjasldgjaklsgj<br/>skjgaksjdgksaljga<br/></p><br />
 
-    </div>
-    <div style="float:right; width: 9.5%; background-color:black; height: 10px;">
-        <p></p>
-    </div>
-    <div style="float: right; width: 26%; background-color: yellow; margin-top: 100px; text-align: left; font-size: 20px" class="box">
-        <ul class="toolbar">
-            <li class="toolbar-item"><a href="GioiThieuChung.html" class="sub-toolbar-item">Giới thiệu chung</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Hệ thống bệnh viện</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Đội ngũ bác sĩ</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tin truyền thông</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Trang thiết bị</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tuyển dụng</a></li>
-            <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Thư viện hình & video</a></li>
-        </ul>
+        </div>
+        <div class="right_div_in_main_content_div">
+            <div style="position: absolute; width: 100%; box-shadow: 0 5px 25px rgb(0 0 0 /20%); top:0; left:0;">
+                <ul class="toolbar">
+                    <li class="toolbar-item"><a href="gioithieuchung.html" class="sub-toolbar-item">Giới thiệu chung</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Hệ thống bệnh viện</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Đội ngũ bác sĩ</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tin truyền thông</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Trang thiết bị</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tuyển dụng</a></li>
+                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Thư viện hình & video</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <footer>
+      
     </footer>
 </body>
 </html>
