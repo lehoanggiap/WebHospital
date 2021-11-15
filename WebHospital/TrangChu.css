@@ -59,9 +59,9 @@ header .navigation .menu{
   transition: 0.3s;
 }
 
- .menu-item .sub-menu{
+.menu-item .sub-menu{
   position: absolute;
-  background: #fff;
+  background: #F9F3F3;
   top: 70px;
   line-height: 40px;
   list-style: none;
@@ -72,7 +72,7 @@ header .navigation .menu{
   opacity: 0;
   transition: 0.3s;
   transition-property: transform, opacity;
-  width: 40%; 
+  width: 40%;
 }
 
 .menu-item:hover .sub-menu{
