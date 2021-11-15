@@ -335,12 +335,12 @@ header{
                     /*Part 3*/
 .container{
   height:660px;
-   position: relative;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   background: #FFCBCB;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #FFCBCB;
 }
 .container h2{
   margin: 10px;
@@ -397,7 +397,7 @@ header{
 }
 
 .container .card.active .content{
-    height: auto;
+    padding-bottom: 300px;
 }
 
 .container .card .content::before{
@@ -666,7 +666,7 @@ section .trailer.active{
 .footer-col ul li:not(:last-child){
   margin-bottom: 10px;
 }
-.footer-col ul li .chu{
+.footer-col ul li a{
   font-size: 16px;
   text-transform: capitalize;
   color: black;
