@@ -4,141 +4,17 @@
     <meta charset="utf-8" />
     <title>Giới thiệu chung - Bệnh viện da liễu TPHCM</title>
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
-    <link rel="stylesheet" type="text/css" href="aboutus.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
     <link rel="stylesheet" type="text/css" href="cssawesome/all.min.css" />
     <link rel="stylesheet" type="text/css" href="cssawesome/fontawesome.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="footer.css"/>
+    <link rel="stylesheet" type="text/css" href="GioiThieuChung.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!--import thư viện icon font awesome. Vô trang fontware cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <style>
-        .toolbar {
-            list-style: none;
-            margin: 30px;
-            padding: 0;
-        }
-
-        .toolbar-item {
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .toolbar .toolbar-item .sub-toolbar-item {
-            position: relative;
-            display: block;
-            text-decoration: none;
-            padding-left: 20px;
-            padding-right: 10px;
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-            border: 0;
-            border-bottom: 1px solid #808080;
-        }
-
-        .toolbar > :last-child > :last-child {
-            border: 0;
-            padding-bottom: 0;
-        }
-
-        .toolbar .toolbar-item .sub-toolbar-item:hover {
-            color: green;
-            background-color: hotpink;
-        }
-
-        .toolbar .toolbar-item .sub-toolbar-item:before {
-            content: "\f054";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 700;
-            /*mã icon và tên font trong thư viện đã import font-weight: 700;*/
-            position: absolute;
-            top: -2px;
-            right: 0;
-            z-index: 1;
-            color: #d9d9d9;
-            transition: all 0.5s ease-out;
-        }
-
-        .toolbar .toolbar-item .sub-toolbar-item:after {
-            content: "";
-            position: absolute;
-            height: 25px;
-            width: 1px;
-            top: -3px;
-            left: 0;
-            z-index: 1;
-            background-color: #d9d9d9;
-            transition: all 0.5s ease-out;
-        }
-
-        .main_content_div {
-            background-color: black;
-            position: relative;
-            display: flex;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            justify-content: space-between;
-            padding: 3% 0;
-        }
-
-        .left_div_in_main_content_div {
-            position: relative;
-            width: 52%;
-            background-color: dodgerblue;
-            padding-left: 15px;
-            left: 9.5%;
-        }
-
-        .right_div_in_main_content_div {
-            position: relative;
-            width: 26%;
-            background-color: white;
-            text-align: left;
-            font-size: 20px;
-            right: 9.5%;
-        }
-
-        .inner_page_banner {
-            position: relative;
-            height: 90px;
-            display: flex;
-            background-color: red;
-        }
-
-        .item_list_element {
-            position: relative;
-            top: 50px;
-            left: 9.5%;
-        }
-
-        .item_list_element_sub_item {
-            text-decoration: none;
-            color: white;
-            font-size: 20px;
-        }
-
-        .title {
-            display: block;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-            .title:after {
-                position: absolute;
-                content: "";
-                width: 50px;
-                height: 4px;
-                background-color: #396cf0;
-                bottom: 0;
-                left: 0;
-            }
-    </style>
 </head>
 <body>
     <header>
@@ -236,68 +112,93 @@
         </div>
     </div>
     <div class="inner_page_banner"></div>
-    <footer>
+    <footer style="color:white">
         <div style="display: block;">
-            <section style="background-color: #009247; padding: 90px 0px 38px; display: flex;">
-                <div style="margin-left: auto; margin-right: auto; display: flex; position: relative; width: 100%;">
-                    <div style="position: relative; width: 28%; left:9.5%; background-color: red; padding: 15px;">
-                        <p>Nội dung</p>
-                        <div style="display: flex; align-items :center; justify-content: space-between; margin-top: 20px;">
-                            <a href="#"><img src="Images/logoSaleNoti.png" style="max-width: 170px" /></a>
-                            <a href="#"><img src="Images/dmca-badge.png" style="max-width: 170px;" /></a>
+            <section class="footer-top-wrap">
+                <div class="footer-top-wrap-container">
+                    <div class="footer-top-wrap-container-col1">
+                        <div style="position: relative; width: 100%; top: 0; left: 0;">
+                            <p>Nội dung</p>
+                            <div class="footer-top-wrap-container-col1-cer">
+                                <a href="#"><img src="Images/logoSaleNoti.png" style="width:170px;"/></a>
+                                <a href="#"><img src="Images/dmca-badge.png" style="width: 150px; float:right;margin-top:15px"/></a>
+                            </div>
                         </div>
                     </div>
-                    <div style="position: relative; width: 20%; left: 9.5%; background-color: aqua; padding: 15px;">
-                        <div style="position: relative;">
+                    <div class="footer-top-wrap-container-col2">
+                        <div style="position: relative; width:100%">
                             <h3 class="title">Dịch vụ</h3>
                         </div>
                         <div>
-                            <ul style="list-style-type: none; margin:0; padding: 0; display: block">
-                                <li style="margin-bottom: 10px;"><a href="#">Khám da liễu</a></li>
-                                <li style="margin-bottom: 10px;"><a href="#">Phẫu thuật da lưng</a></li>
-                                <li style="margin-bottom: 10px;"><a href="#">Điều trị bệnh tràm</a></li>
+                            <ul class="footer-top-wrap-container-col2-list">
+                                <li style="margin-bottom: 10px;"><a href="#">Nội dung</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Nội dung</a></li>
+                                <li style="margin-bottom: 10px;"><a href="#">Nội dung</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div style="position: relative; width: 16.5%; left: 9.5%; background-color: blueviolet; padding: 15px;">
-                        <div style="position: relative;">
+                    <div class="footer-top-wrap-container-col3" >
+                        <div style="position: relative; width:100%;">
                             <h3 class="title">Về chúng tôi</h3>
                         </div>
                         <div>
-                            <ul style="list-style-type: none; margin:0; padding: 0; display: block">
+                            <ul class="footer-top-wrap-container-col3-list">
                                 <li style="margin-bottom: 10px;"><a href="#">Hệ thống</a></li>
                                 <li style="margin-bottom: 10px;"><a href="#">Đội ngũ bác sĩ</a></li>
                                 <li style="margin-bottom: 10px;"><a href="#">Tin tức</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div style="position: relative; width: 16.5%; left: 9.5%; background-color: brown; padding: 15px;">
+                    <div class="footer-top-wrap-container-col4">
                         <div style="position: relative;">
                             <h3 class="title">Liên hệ</h3>
                         </div>
-                        <div style="position: relative; ">
-                            <ul style="list-style-type: none; margin:0; padding: 0; display: block;">
-                                <li style="margin-bottom: 10px;"><i class="fas fa-phone" style="color:white"></i><a href="#" style="margin-left: 10px;">123456789</a></li>
-                                <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color:white"></i><a href="#" style="margin-left: 10px;">info@gmail.com</a></li>
+                        <div >
+                            <ul class="footer-top-wrap-container-col4-list">
+                                <li style="margin-bottom: 10px;">
+                                    <div style="display:flex;align-items:center">
+                                        <i class="fas fa-phone" style="color:white;"></i>
+                                        <a href="#" style="margin-left: 10px;">123456789</a>
+                                    </div>
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <div style="display:flex;align-items:center">
+                                        <i class="fas fa-envelope" style="color:white"></i>
+                                        <a href="#" style="margin-left: 10px;">info@gmail.com</a>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </section>
-            <section style="background-color: #1bb462; padding: 30px 0; display: flex;">
-                <div style="margin-left: auto; margin-right: auto; display: flex; position: relative; width: 100%;">
-                    <div style="position: relative; width: 40%; left:9.5%; background-color: red; padding: 15px;">
-                        <ul style="list-style-type: none; margin: 0; padding:0; display: flex;">
+            <section class="footer-center-wrap">
+                <div class="footer-center-wrap-container">
+                    <div class="footer-center-wrap-container-col1">
+                        <ul class="footer-center-wrap-container-col1-list">
                             <li>Theo dõi tin tức và dịch vụ mới nhất của chúng tôi!</li>
-                            <li><a href="#" style="padding: 0px 10px"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#" style="padding: 0px 10px"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#" style="padding: 0px 10px"><i class="fab fa-facebook-f" style="color: white"></i></a></li>
+                            <li><a href="#" style="padding: 0px 10px"><i class="fab fa-youtube" style="color: white"></i></a></li>
                         </ul>
+                    </div>
+                    <div class="footer-center-wrap-container-col2">
+                        <form class="footer-center-wrap-container-col2-form">
+                            <div style="position:relative; width:45%"><h4 style="font-size:16px;font-weight:500;margin:0">Cập nhật thông tin mới nhất</h4></div>
+                            <div style="position:relative; width:55%; display:flex;">
+                                <div style="position:relative;width:100%;display:flex">
+                                    <input type="email" name="EMAIL" placeholder="Nhập email của bạn" class="email-input">
+                                    <span style="position:absolute; right:0;height:100%">
+                                        <input type="submit" value="ĐĂNG KÝ!" class="register-btn">
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </section>
-            <section style="background-color: #009247; padding: 30px 0; display: block; margin-top: 5px;">
+            <section class="footer-bottom-wrap">
                 <div style="text-align:center">
-                    &copy; Bệnh viện Mắt Sài Gòn 2020. <br />
+                    &copy; Bệnh viện .... <br />
                     <span class="hidden-phone">
                         Tất cả những thông tin trên chỉ mang tính chất tham khảo, bệnh nhân phải đến trực tiếp bệnh
                         viện khám để bác sĩ chẩn đoán và điều trị.
