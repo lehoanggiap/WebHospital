@@ -1,0 +1,87 @@
+
+<%- include("./partials/head.ejs") %>
+   <link rel="stylesheet" href="/css/login.css">
+   
+   <body>
+      <%- include("./partials/nav.ejs") %>
+      <section>
+         <div class="color"></div>
+         <div class="color"></div>
+         <div class="color"></div>
+         <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="container">
+               <div class="user signinBx" ng-controller="loginCtrl">
+                  <div class="imgBx">
+                     <img style=" width: 350px; height: 400px;" src="HinhAnh/1.jpg">
+                  </div>
+                  <div class="formBx">
+                     <form action='/login'>
+                        <h2>Sign in</h2>
+                        <input type="text" placeholder="Email" name="email">
+                        <div class="emailError"></div>
+                        <input type="password"  placeholder="Password" name="password">
+                        <div class="passwordError"></div>
+                        <input type="submit" value="Login">
+
+                        <p class="signup">Don't have an account ?
+                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="/register">Sign up</a>
+                        </p>
+                         <p class="signup">Forgot password ?
+                           <a style="text-decoration: none; color: #577eff;font-weight: 500;" href="/sendMail">Click Here</a>
+                        </p>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <%- include("./partials/footer.ejs") %>
+
+      <script>
+       const form = document.querySelector('form');
+      const emailError=document.querySelector('.emailError');
+      const passwordError=document.querySelector('.passwordError');
+      form.addEventListener('submit',async(e)=>{
+         e.preventDefault();
+         
+         //reset errors:
+         emailError.textContent='';
+         passwordError.textContent='';
+
+         const email = form.email.value;
+         const password = form.password.value;
+        
+         try{
+            const res = await fetch('/login',{
+               method:'POST',
+               body:JSON.stringify({email,password}),
+               headers:{'Content-Type':'application/json'}
+            });
+            const data =await res.json();
+            console.log(data)
+            if(data.errors){
+               emailError.textContent=data.errors.email;
+               passwordError.textContent=data.errors.password;
+            }
+
+            
+            
+            if(data.user){
+               
+               location.assign('/appointment');
+            }
+            // if(email=='admin@gmail.com' && password=='admin123'){
+            //    location.assign('/admin');
+            // }
+         }catch (err){
+            console.log(err);
+         }
+      });
+      </script>
+   </body>
+</html>

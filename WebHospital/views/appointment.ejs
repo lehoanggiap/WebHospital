@@ -1,0 +1,68 @@
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/Appointment.css">
+<body>
+   <%- include("./partials/nav.ejs") %>
+   
+   <section>
+      <%- include("./partials/sidenav.ejs") %>
+      <div class="container">
+         <div class="container-form">
+            <form action="/appointment">
+               <h2 class="heading heading-yellow">Đặt lịch khám</h2>
+               
+               <div class="form-field">
+                  <p>Họ và tên</p>
+                  <input type="text" name="fullname" placeholder="Họ và tên" required="required">
+               </div>
+               
+               <div class="form-field">
+                <p>Số điện thoại</p>
+                <input type="email" name="phone" placeholder="Email" required="required">
+             </div>
+               <div class="form-field">
+                  <p>Ngày sinh</p>
+                  <input type="date" name="birthday">
+               </div>
+               <div class="form-field">
+                <p>Giới tính</p>
+                <select name="select" id="#" name="gender" required="required">
+                   <option value="1">Nam</option>
+                   <option value="2">Nữ</option>
+                </select>
+             </div>
+             <div class="form-field">
+                <p>Chọn loại dịch vụ</p>
+                <select name="select" id="#" name="service" required="required">
+                    <option value="1">Khám bệnh ngoài da</option>
+                    <option value="2">Khám & tư vấn thẩm mỹ da</option>
+                    <option value="3">Khám & tư vấn tạo hình thẫm mỹ</option>
+                    <option value="4">Khám nam khoa</option>
+                    <option value="5">Khám phụ khoa</option>
+                 </select>
+             </div>
+               <div class="form-field">
+                  <p>Ngày đặt hẹn</p>
+                  <input type="date" name="bookingday" required="required">
+               </div>
+               <div class="form-field">
+                  <p>Giờ đặt hẹn</p>
+                  <input type="time" name="bookingday" required="required">
+               </div>
+              <div class="form-field">
+                <p>Email</p>
+                <input type="email" name="email" placeholder="Email" required="required">
+             </div>
+             <div class="form-field">
+                <p>Ghi chú</p>
+                <textarea name="textarea" required="required"> </textarea>
+             </div>
+             <button class="btn">Xác nhận</button>
+             
+             
+            </form>
+         </div>
+      </div>
+   </section>
+   <%- include("./partials/footer.ejs") %>
+</body>
+</html>
