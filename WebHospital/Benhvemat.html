@@ -1,27 +1,66 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Giới thiệu chung - Bệnh viện da liễu TPHCM</title>
+    <meta charset="utf-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" type="text/css" href="Benhvemat.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon.png" />
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="cssawesome/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="cssawesome/fontawesome.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="footer.css"/>
-    <link rel="stylesheet" type="text/css" href="GioiThieuChung.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!--import thư viện icon font awesome. Vô trang fontware cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .custom_a {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            border: 0;
+            border-bottom: 1px solid #808080;
+        }
+
+        a:hover {
+            color: forestgreen;
+        }
+
+        .custom_a:before {
+            content: ">";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            position: absolute;
+            top: -2px;
+            right: 0;
+            z-index: 1;
+            color: #d9d9d9;
+            transition: all 0.5s ease-out;
+        }
+
+        .custom_a:after {
+            content: "";
+            position: absolute;
+            height: 25px;
+            width: 2px;
+            top: -3px;
+            left: 0;
+            z-index: 1;
+            font-size: 28px;
+            background-color: #d9d9d9;
+            transition: all 0.5s ease-out;
+        }
+    </style>
 </head>
 <body>
     <header>
         <a href="#" class="logo"><img src='Images/logo-duong-ban-ngang.png'></a>
         <div class="navigation">
             <ul class="menu">
-                <div class="close-btn"></div>
+
                 <li class="menu-item"><a href="#">Trang chủ</a></li>
                 <li class="menu-item">
                     <a class="sub-btn" href="#">Về chúng tôi</a>
@@ -83,39 +122,99 @@
     </header>
 
 
-    <div class="inner_page_banner">
-        <span class="item_list_element"><a href="#" class="item_list_element_sub_item"><strong>Bệnh viện da liễu &nbsp;></strong></a></span> 
-        <span class="item_list_element"><a href="aboutus.html" class="item_list_element_sub_item"><strong>&nbsp; Về chúng tôi &nbsp;> </strong></a></span> 
-    </div>
-    <div class="main_content_div">
-        <div class="left_div_in_main_content_div">
-            <p><h3>1/GIỚI THIỆU CHUNG: </h3></p><br />
-            <p>Nội dung</p><br /><br />
-            <h3>2/SỨ MỆNH: </h3><br />
-            <p>Nội dung</p><br /><br />
-            <h3>3/GIÁ TRỊ CỐT LÕI: </h3><br />
-            <p>Nội dung</p><br /><br />
-            <h3>4/TẦM NHÌN: </h3><br />
-            <p>Nội dung</p><br /><br />
-            <p><h3 style="text-align:center">LỊCH SỬ HÌNH THÀNH: </h3>Nội dung<br/>Nội dung<br/></p><br />
-        </div>
-        <div class="right_div_in_main_content_div">
-            <div style="position: absolute; width: 100%; box-shadow: 0 5px 25px rgb(0 0 0 /20%); top:0; left:0;">
-                <ul class="toolbar">
-                    <li class="toolbar-item"><a href="gioithieuchung.html" class="sub-toolbar-item">Giới thiệu chung</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Hệ thống bệnh viện</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Đội ngũ bác sĩ</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tin truyền thông</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Trang thiết bị</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Tuyển dụng</a></li>
-                    <li class="toolbar-item"><a href="#" class="sub-toolbar-item">Thư viện hình & video</a></li>
-                </ul>
+    <!--<script type="text/javascript">
+      //jquery for toggle dropdown menu:
+         $(document).ready(function(){
+            //toggle sub-menus:
+            $(".sub-btn").click(function(){
+               $(this).next(".sub-menu").slideToggle();
+            });
+         });
+         //javascript for the responsive navigation menu:
+         var menu=document.querySelector(".menu");
+         var menuBtn=document.querySelector(".menu-btn");
+         var closeBtn=document.querySelector(".close-btn");
+         menuBtn.addEventListener("click",function(){
+            menu.classList.add("active");
+         });
+         closeBtn.addEventListener("click",function(){
+            menu.classList.remove("active");
+         });
+
+         //javascript for scrolling header:
+          window.addEventListener("scroll" ,function(){
+            var header=document.querySelector("header");
+            if (window.scrollY>0) {
+               header.classList.add('white');
+            }
+            else{
+               header.classList.remove('white');
+            }
+          });
+    </script>-->
+
+
+
+    <div style="margin-top:100px;margin-left:100px;margin-right:100px">
+        <h1>CÁC TẬT KHÚC XẠ</h1>
+        <div style="float: left; background-color: white; display: grid; grid-template-columns: auto auto; grid-column-gap: 50px; grid-row-gap: 50px; width: 950px;">
+
+
+            <div style="width: 400px; height: 600px; box-shadow: 0 5px 25px rgb(0 0 0 /20%)">
+                <img src="Images/hoidap.jpg" width="400" height="300" style="margin-bottom:40px" />
+                <br />
+                <p style="margin-left: 20px; margin-right: 20px"> <a style="font-size:25px;margin-top:20px" href="#">Hỏi đáp các phương pháp phẫu thuật LASER xóa cận – viễn – loạn phổ biến hiện nay</a></p>
+                <br />
+                <p style="margin:15px">Rời bỏ vướng bận từ cặp kính cận là mơ ước của rất nhiều người khi phải sống chung cùng tật khúc xạ. Phẫu thuật</p>
+            </div>
+
+
+
+            <div style="width: 400px; height: 600px; box-shadow: 0 5px 25px rgb(0 0 0 /20%)">
+                <img src="Images/hoidap.jpg" width="400" height="300" style="margin-bottom:40px" />
+                <br />
+                <a style="font-size:30px;margin-top:20px" href="#">Hỏi đáp các phương pháp phẫu thuật LASER xóa cận – viễn – loạn phổ biến hiện nay</a>
+                <br />
+                <p style="margin:15px">Rời bỏ vướng bận từ cặp kính cận là mơ ước của rất nhiều người khi phải sống chung cùng tật khúc xạ. Phẫu thuật</p>
+            </div>
+
+
+
+            <div style="width: 400px; height: 600px; box-shadow: 0 5px 25px rgb(0 0 0 /20%)">
+                <img src="Images/hoidap.jpg" width="400" height="300" style="margin-bottom:40px" />
+                <br />
+                <a style="font-size:30px;margin-top:20px" href="#">Hỏi đáp các phương pháp phẫu thuật LASER xóa cận – viễn – loạn phổ biến hiện nay</a>
+                <br />
+                <p style="margin:15px">Rời bỏ vướng bận từ cặp kính cận là mơ ước của rất nhiều người khi phải sống chung cùng tật khúc xạ. Phẫu thuật</p>
+            </div>
+
+
+            <div style="width: 400px; height: 600px; box-shadow: 0 5px 25px rgb(0 0 0 /20%)">
+                <img src="Images/hoidap.jpg" width="400" height="300" style="margin-bottom:40px" />
+                <br />
+                <a style="font-size:30px;margin-top:20px" href="#">Hỏi đáp các phương pháp phẫu thuật LASER xóa cận – viễn – loạn phổ biến hiện nay</a>
+                <br />
+                <p style="margin:15px">Rời bỏ vướng bận từ cặp kính cận là mơ ước của rất nhiều người khi phải sống chung cùng tật khúc xạ. Phẫu thuật</p>
             </div>
         </div>
+
+
+        <div style="float:right;background-color:white">
+            <ul style="list-style-type:none">
+                <li> <a href="#" class="custom_a">Khám mắt </a></li>
+                <li> <a href="#" class="custom_a">Điều trị tật khúc xạ </a></li>
+                <li> <a href="#" class="custom_a">Phẩu thuật khúc xạ </a></li>
+                <li> <a href="#" class="custom_a">Phẩu thuật cườm khô Phaco  </a></li>
+                <li> <a href="#" class="custom_a">Phẩu thuật cườm nước Glaucoma </a></li>
+                <li> <a href="#" class="custom_a">Nhãn nhi &amp; Điều trị lác(lé) </a></li>
+                <li> <a href="#" class="custom_a">Phẫu thuật ghép giác mạc  </a></li>
+                <li> <a href="#" class="custom_a">Tạo hình thẩm mĩ </a></li>
+
+            </ul>
+
+
+        </div>
     </div>
-    <div class="inner_page_banner"></div>
-
-
 
     <footer style="color:white">
         <div style="display: block;">
@@ -125,8 +224,8 @@
                         <div style="position: relative; width: 100%; top: 0; left: 0;">
                             <p>Nội dung</p>
                             <div class="footer-top-wrap-container-col1-cer">
-                                <a href="#"><img src="Images/logoSaleNoti.png" style="width:170px;"/></a>
-                                <a href="#"><img src="Images/dmca-badge.png" style="width: 150px; float:right;margin-top:15px"/></a>
+                                <a href="#"><img src="Images/logoSaleNoti.png" style="width:170px;" /></a>
+                                <a href="#"><img src="Images/dmca-badge.png" style="width: 150px; float:right;margin-top:15px" /></a>
                             </div>
                         </div>
                     </div>
@@ -142,7 +241,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer-top-wrap-container-col3" >
+                    <div class="footer-top-wrap-container-col3">
                         <div style="position: relative; width:100%;">
                             <h3 class="title">Về chúng tôi</h3>
                         </div>
@@ -158,7 +257,7 @@
                         <div style="position: relative;">
                             <h3 class="title">Liên hệ</h3>
                         </div>
-                        <div >
+                        <div>
                             <ul class="footer-top-wrap-container-col4-list">
                                 <li style="margin-bottom: 10px;">
                                     <div style="display:flex;align-items:center">
@@ -213,5 +312,6 @@
 
         </div>
     </footer>
+
 </body>
 </html>
