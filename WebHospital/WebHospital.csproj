@@ -67,11 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aboutus.css" />
+    <Content Include="header.css" />
     <Content Include="aboutus.html" />
-    <Content Include="Benhvemat.html" />
     <Content Include="cssawesome\all.min.css" />
     <Content Include="cssawesome\fontawesome.min.css" />
+    <Content Include="footer.css" />
+    <Content Include="GioiThieuChung.css" />
     <Content Include="GioiThieuChung.html" />
     <Content Include="Images\dmca-badge.png" />
     <Content Include="Images\icon.png" />
