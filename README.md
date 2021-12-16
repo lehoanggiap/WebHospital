@@ -3,7 +3,7 @@
 ### Css ae code internal hoặc inline 
 ### Code xog trang: 
 ### Thẻ a đổi href thành /tên trang  (không có đuôi html nữa)
-###  Thẻ img đổi href thành /HinhAnh/tên hình 
+###  Thẻ img đổi href thành /HinhAnh/tên hình (bỏ hình vô mục HinhAnh )
 ###  Làm xog xóa code html css của header footer 
 ### Đổi đuôi file thành .ejs 
 ###  Ví dụ giống v:
